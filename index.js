@@ -7,6 +7,10 @@ class TodoManager {
     getCompleted() {
         return this.todos.filter((todo) => todo.is_completed);
     }
+
+    getPending() {
+        return this.todos.filter((todo) => !todo.is_completed);
+    }
 }
 
 

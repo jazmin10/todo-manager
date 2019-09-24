@@ -37,6 +37,7 @@ class TodoManager {
         }
 
         this.todos.push(newTodo);
+        return this.todos;
     }
 
     allCompleted() {

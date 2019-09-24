@@ -45,6 +45,10 @@ class TodoManager {
     allPending() {
         return this.todos.every((todo) => !todo.is_completed);
     }
+
+    exportCsv() {
+        return this.todos.map((todo) => todo.title).join(", ");
+    }
 }
 
 
@@ -76,4 +80,4 @@ console.log(todoManager.allCompleted()); //returns true when all todo items are 
 console.log(todoManager.allPending()); //returns true when all todo items are pending
 console.log(todoManager.exportCsv()); //returns Comma Separated Values of titles "Todo title, Another todo title" */
 
-
+console.log(todoManager.exportCsv());

@@ -23,6 +23,12 @@ class TodoManager {
     getCount() {
         return this.todos.length;
     }
+
+    markAsCompleted(todoTitle) {
+        // Using {title} instead of todo in callback because you can destruct objects
+        let todoItem = this.todos.find(({title}) => title === todoTitle);
+        todoItem.is_completed = true;
+    }
 }
 
 
@@ -55,4 +61,4 @@ console.log(todoManager.allPending()); //returns true when all todo items are pe
 console.log(todoManager.exportCsv()); //returns Comma Separated Values of titles "Todo title, Another todo title" */
 
 
-
+todoManager.markAsCompleted("Practice flashcards");

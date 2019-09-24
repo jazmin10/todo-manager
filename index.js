@@ -25,8 +25,7 @@ class TodoManager {
     }
 
     markAsCompleted(todoTitle) {
-        // Using {title} instead of todo in callback because you can destruct objects
-        let todoItem = this.todos.find(({title}) => title === todoTitle);
+        let todoItem = this.todos.find((todo) => todo.title === todoTitle);
         todoItem.is_completed = true;
     }
 

@@ -19,6 +19,10 @@ class TodoManager {
     getLast() {
         return this.todos[this.todos.length - 1];
     }
+
+    getCount() {
+        return this.todos.length;
+    }
 }
 
 

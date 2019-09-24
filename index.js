@@ -1,7 +1,7 @@
 class TodoManager {
 
     constructor(todos) {
-
+        this.todos = todos;
     }
 }
 
@@ -16,7 +16,7 @@ const initialTodos = [{
 }];
 const todoManager = new TodoManager(initialTodos);
 
-console.log(todoManager.getCompleted()); //returns completed todos
+/* console.log(todoManager.getCompleted()); //returns completed todos
 console.log(todoManager.getPending()); //returns todos that are not completed
 console.log(todoManager.getFirst());
 console.log(todoManager.getLast());
@@ -32,4 +32,7 @@ todoManager.add({
 });
 console.log(todoManager.allCompleted()); //returns true when all todo items are completed
 console.log(todoManager.allPending()); //returns true when all todo items are pending
-console.log(todoManager.exportCsv()); //returns Comma Separated Values of titles "Todo title, Another todo title"
+console.log(todoManager.exportCsv()); //returns Comma Separated Values of titles "Todo title, Another todo title" */
+
+
+

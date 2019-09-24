@@ -11,6 +11,14 @@ class TodoManager {
     getPending() {
         return this.todos.filter((todo) => !todo.is_completed);
     }
+
+    getFirst() {
+        return this.todos[0];
+    }
+
+    getLast() {
+        return this.todos[this.todos.length - 1];
+    }
 }
 
 

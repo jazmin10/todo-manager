@@ -3,6 +3,10 @@ class TodoManager {
     constructor(todos) {
         this.todos = todos;
     }
+
+    getCompleted() {
+        return this.todos.filter((todo) => todo.is_completed);
+    }
 }
 
 

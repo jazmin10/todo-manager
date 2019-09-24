@@ -29,6 +29,15 @@ class TodoManager {
         let todoItem = this.todos.find(({title}) => title === todoTitle);
         todoItem.is_completed = true;
     }
+
+    add(newTodo) {
+        // !undefined converts to true
+        if (!newTodo.is_completed) {
+            newTodo.is_completed = false;
+        }
+
+        this.todos.push(newTodo);
+    }
 }
 
 
@@ -60,5 +69,12 @@ console.log(todoManager.allCompleted()); //returns true when all todo items are 
 console.log(todoManager.allPending()); //returns true when all todo items are pending
 console.log(todoManager.exportCsv()); //returns Comma Separated Values of titles "Todo title, Another todo title" */
 
+todoManager.add({
+    title: "Recap flashcards",
+    is_completed: true
+});
 
-todoManager.markAsCompleted("Practice flashcards");
+todoManager.add({
+    title: "Get some rest"
+});
+
